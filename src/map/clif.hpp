@@ -1202,6 +1202,7 @@ enum out_ui_type : int8 {
 	OUT_UI_QUEST = 6,
 	OUT_UI_ATTENDANCE,
 	OUT_UI_ENCHANTGRADE,
+	OUT_UI_ENCHANT = 10,
 };
 
 void clif_ui_open( struct map_session_data& sd, enum out_ui_type ui_type, int32 data );
@@ -1240,5 +1241,8 @@ void clif_laphine_upgrade_open( struct map_session_data* sd, std::shared_ptr<s_l
 // Reputation System
 void clif_reputation_type( struct map_session_data& sd, int64 type, int64 points );
 void clif_reputation_list( struct map_session_data& sd );
+
+// Item Enchant UI
+void clif_enchantwindow_open( struct map_session_data& sd, uint64 clientLuaIndex );
 
 #endif /* CLIF_HPP */

@@ -8237,6 +8237,12 @@ Sets the reputation points via <points> for reputation group <type> for the atta
 
 Gets the reputation points for reputation group <type> for the attached player or the given character ID.
 <type> is the client side index as stored in the Id field of the reputation.yml database files.
+*item_enchant(<clientside LUA index>{,<char id>});
+
+Opens the enchant UI for the attached character or the player given by the char ID parameter.
+NOTE: Make sure the player does not exceed 70% weight before calling this command.
+
+This command requires packet version 2021-11-03 or newer.
 
 ---------------------------------------
 \\
