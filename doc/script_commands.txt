@@ -8238,6 +8238,14 @@ Sets the reputation points via <points> for reputation group <type> for the atta
 Gets the reputation points for reputation group <type> for the attached player or the given character ID.
 <type> is the client side index as stored in the Id field of the reputation.yml database files.
 
+*item_reform({<item id>{,<char id>}})
+*item_reform({<"item name">{,<char id>}})
+
+Opens the item reform UI for <item id> or <item name> for the attached player or the given character id.
+If run from within an item script <item id> or <item name> is optional.
+
+This feature requires packet version 2021-11-03 or newer.
+
 ---------------------------------------
 \\
 6,1.- Unit-related commands
