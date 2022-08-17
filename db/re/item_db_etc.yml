@@ -21059,7 +21059,7 @@ Body:
       NoMail: true
       NoAuction: true
   - Id: 6672
-    AegisName: Gray_Shard
+    AegisName: Shard_of_Gray
     Name: Gray Shard
     Type: Etc
     Sell: 1
