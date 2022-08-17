@@ -5760,6 +5760,9 @@
 	export_constant(IG_Bs_Item_M_S_55);
 	export_constant(IG_Bs_Item_M_S_56);
 
+	export_constant(IG_ODIN_RELIC);
+
+
 	/* unit stop walking */
 	export_constant(USW_NONE);
 	export_constant(USW_FIXPOS);
