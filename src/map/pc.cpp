@@ -6877,6 +6877,10 @@ static void pc_checkallowskill(struct map_session_data *sd)
 			if (sd->sc.data[status] && !pc_check_weapontype(sd, skill_get_weapontype(it.second->skill_id)))
 				status_change_end(&sd->bl, status, INVALID_TIMER);
 		}
+		if (flag[SCF_REQUIRENOWEAPON]) { 
+			if (sd->sc.data[status] && sd->status.weapon)
+				status_change_end(&sd->bl, status, INVALID_TIMER);
+		}
 
 		if (flag[SCF_REQUIRESHIELD]) { // Skills requiring a shield
 			if (sd->sc.data[status] && sd->status.shield <= 0)
