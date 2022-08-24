@@ -10,4 +10,8 @@
  * Format:
  *	 { "name", &battle_config.<variable name>, <default value>, <minimum value>, <maximum value> },
  **/
-
+ 
+/**
+* @AFK
+**/
+{	"afk_timeout",			&battle_config.afk_timeout,			0,	0,	INT_MAX,	},

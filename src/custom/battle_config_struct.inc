@@ -12,3 +12,7 @@
  *	 <datatype> name;
  **/
 
+/**
+* @AFK
+**/
+int	afk_timeout;

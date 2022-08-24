@@ -9,3 +9,8 @@
  **/
 
 //ACMD_DEF(newcommand),
+
+/**
+* @AFK
+**/
+ACMD_DEF(afk),
