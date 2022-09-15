@@ -578,8 +578,11 @@ enum clif_messages : uint16_t {
 	MSG_ATTENDANCE_DISABLED = 0xd92,
 
 	// Unofficial names
-	C_ITEM_EQUIP_SWITCH = 0xbc7, 
+	C_ITEM_EQUIP_SWITCH = 0xbc7,
 	C_ITEM_NOEQUIP = 0x174,	/// <"You can't put this item on."
+	C_ENCHANT_OVERWEIGHT = 0xEFD,
+	C_ENCHANT_SUCCESS = 0xF11,
+	C_ENCHANT_FAILURE = 0xF12,
 };
 
 enum e_personalinfo : uint8_t {
@@ -619,8 +622,8 @@ enum class e_pet_evolution_result : uint32 {
 
 enum e_config_type : uint32 {
 	CONFIG_OPEN_EQUIPMENT_WINDOW = 0,
-	// Unknown
-	CONFIG_PET_AUTOFEED = 2,
+	CONFIG_CALL,
+	CONFIG_PET_AUTOFEED,
 	CONFIG_HOMUNCULUS_AUTOFEED
 };
 
@@ -1191,6 +1194,7 @@ enum out_ui_type : int8 {
 	OUT_UI_QUEST = 6,
 	OUT_UI_ATTENDANCE,
 	OUT_UI_ENCHANTGRADE,
+	OUT_UI_ENCHANT = 10,
 };
 
 void clif_ui_open( struct map_session_data& sd, enum out_ui_type ui_type, int32 data );
@@ -1232,5 +1236,11 @@ void clif_reputation_list( struct map_session_data& sd );
 
 // Item Reform UI
 void clif_item_reform_open( struct map_session_data& sd, t_itemid item );
+
+// Item Enchant UI
+void clif_enchantwindow_open( struct map_session_data& sd, uint64 clientLuaIndex );
+
+// Enchanting Shadow / Shadow Scar Spirit
+void clif_enchantingshadow_spirit(unit_data &ud);
 
 #endif /* CLIF_HPP */

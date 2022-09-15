@@ -37532,6 +37532,9 @@ Body:
     Duration2: 30000
     Cooldown: 30000
     FixedCastTime: 1500
+    Duration2: 15000
+    Cooldown: 150000
+    FixedCastTime: 2000
     Requires:
       SpCost:
         - Level: 1
